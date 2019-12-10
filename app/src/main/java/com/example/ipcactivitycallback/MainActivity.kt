@@ -15,6 +15,8 @@ class MainActivity : AppCompatActivity() {
         tv.setOnClickListener {
             var intent:Intent=Intent()
             //当然，如果是调用其他app的Activity，是不能这么写的，比如说微信分享页面
+            //可以看下deeplink相关的知识
+            //如果是要启动远程Service并实现回调，可以使用RemoteCallbackList
             intent.setClass(MainActivity@this,SecondActivity::class.java)
             startActivityForResult(intent,0x01)
         }
